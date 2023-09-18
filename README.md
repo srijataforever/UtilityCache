@@ -22,7 +22,9 @@ Constraints
 • You are permitted to use external libraries (e.g. nuget packages)
 
 #### Problems faced: 
+  * Using the microsoft.extensions.caching.memory, but could not access the size property for LRU mechanism
   * Building a generic controller - Ran into 'No operations defined in spec!' issue
 
 #### Resolution: 
+  * Built a caching system using IDictionary and LinkedList concept and used a configurable appsettings Capacity injected into the Processor file.
   * Using string Key and object Value (although object requires boxing and unboxing)
